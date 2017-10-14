@@ -1,0 +1,101 @@
+body {
+  color: #f1f1f1;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-weight: lighter;
+  padding: 80px 0;
+}
+
+body, 
+input.form-control, 
+textarea.form-control {
+  background: #191718;
+}
+
+a {
+  color: #ff8500;
+  transition: ease all .2s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-weight: normal;
+  border-bottom: 1px solid;
+  background: #222;
+  width: 100%;
+}
+
+nav a {
+  padding-right: 15px;
+  font-size: 14px;
+}
+
+ul {
+  text-align: left;
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-control:focus {
+  border-color: #ff8500;
+  background: #222;
+  box-shadow: none;
+}
+
+input.form-control {
+  height: 50px;
+}
+
+input.form-control, 
+textarea.form-control {
+  border: 2px solid #ff8500;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  background: #ff8500;
+  color: #191718;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: ease all .3s;
+}
+
+input[type="submit"]:hover {
+  background: transparent;
+  border: 2px inset #ff8500;
+  color: #ff8500;
+}
+
+table {
+  border-radius: 15px;
+  font-size: 13px;
+  margin: 50px 0;
+}
+
+thead tr {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  background: #ff8500;
+}
+
+tr {
+  background: #222;
+}
