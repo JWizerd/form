@@ -56,6 +56,12 @@ label {
   box-shadow: none;
 }
 
+.search-form {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+}
+
 input.form-control {
   height: 50px;
 }
@@ -98,4 +104,13 @@ thead tr {
 
 tr {
   background: #222;
+}
+
+.todo td:last-child p {
+  max-height: 200px;
+  overflow: auto;
+}
+
+.table>tbody>tr>td {
+  vertical-align: middle;
 }

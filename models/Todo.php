@@ -16,9 +16,13 @@ class Todo {
    * @todo htmlspecialchars() for each value
    */
   private static function parse_values($post_obj) {
+    $sanitized = [];
     $vals = array_values($post_obj);
     array_splice($vals, -1);
-    return join('", "', $vals);
+    foreach ($vals as $val) {
+      array_push($sanitized, htmlspecialchars($val));
+    }
+    return join('", "', $sanitized);
   }
 
   public static function add_todo($post_obj) {
@@ -36,11 +40,32 @@ class Todo {
     $todos = [];
     $todos_obj = $db->pdo->query('SELECT * FROM todos');
     foreach ($todos_obj as $field_name => $field) {
-      $todos += [$todos[$field_name] = $field];
+      array_push($todos, $field);
     }
     return $todos;
     // close connection
     $db = null;
     $stmt = null; 
   }
-}
+
+  public static function search($query) {
+    $db = new DB();
+    $todos = [];
+    $todos_obj = $db->pdo->query("SELECT * FROM todos 
+                                  WHERE developer LIKE '%{$query}%' OR
+                                        pm LIKE '%{$query}%' OR
+                                        designer LIKE '%{$query}%' OR
+                                        pmteam LIKE '%{$query}%' OR
+                                        todo LIKE '%{$query}%' OR
+                                        description LIKE '%{$query}%'
+                                ");
+    foreach ($todos_obj as $field_name => $field) {
+      array_push($todos, $field);
+    }
+    return $todos;
+    // close connection
+    $db = null;
+    $stmt = null;
+  }
+
+} /* todo class */

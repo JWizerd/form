@@ -16,12 +16,12 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
         <p><a href="./"><img class="img-responsive" src="./madwire-logo.jpg" alt=""></a></p>
-        <h1>View All Todos</h1>
+        <h1>Search Results for: <?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?></h1>
         <hr>
       </div>
       <div class="col-sm-12 text-center">
         <?php 
-        $todos = Todo::get_all_todos(); 
+        $todos = Todo::search(htmlspecialchars($_GET['q'])); 
         ?>
         <?php if (count($todos) > 0) : ?>
           <form action="./search.php" class="search-form" method="GET">
@@ -50,7 +50,7 @@
               <?php endforeach ?>
           </table>
         <?php else : ?>
-          <h1>No bad todos submitted.</h1>
+          <h1>No bad todos Found.</h1>
         <?php endif; ?>
       </div>
     </div>

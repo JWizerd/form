@@ -23,8 +23,7 @@
             <li>improving the accuracy for quote times</li>
             <li>todo prerequisites (such as providing FTP credentials whenever necessary)</li>
             <li>poor communication</li>
-            <li>incorrect todo information (i.e. build site on shopify when meant to build on bigcommerce)</li>
-            <li>etc.</li>
+            <li>incorrect todo information (i.e. build site on shopify when meant to be built on bigcommerce)</li>
           </ul>
           <p>This form is meant to be constructive so please make sure to provide a positive assessment, lots of details and keep it concise. As we gather more and more bad todos our hope is that bottlenecks will begin to emerge and this data will provide evidence that we can then take to Josh for further action.</p>
         </div>
