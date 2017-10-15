@@ -1,3 +1,5 @@
+/* general */
+
 body {
   color: #f1f1f1;
   letter-spacing: 1px;
@@ -15,11 +17,14 @@ textarea.form-control {
 a {
   color: #ff8500;
   transition: ease all .2s;
+  font-weight: bold;
 }
 
 a:hover {
   text-decoration: none;
 }
+
+/* nav */
 
 nav {
   position: absolute;
@@ -40,6 +45,8 @@ nav a {
 ul {
   text-align: left;
 }
+
+/* forms */
 
 label {
   text-transform: uppercase;
@@ -91,6 +98,8 @@ input[type="submit"]:hover {
   border: 2px inset #ff8500;
   color: #ff8500;
 }
+
+/* tables */
 
 table {
   border-radius: 15px;
