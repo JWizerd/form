@@ -1,5 +1,11 @@
 <?php 
 
+/**
+ * @author 2017 Jeremiah Wodke <[<jeremiah.wodke@madwire.com>]>
+ * this simple app is a means to accumilate developer data / feedback of ineffecient project manager todos. It's goal is to improve communication by 
+ * triggering bottlenecks between the developer and project manager workflow.
+ */
+
 require('./models/DB.php');
 
 class Todo {
@@ -19,17 +25,12 @@ class Todo {
     $stmt = null; 
   }
 
-  /**
-   * @todo add whitelist of accepted keys before executing query
-   */
   private static function parse_keys($post_obj) {
     // whitelist form parameters by removing any for fields from POST obj that are not in the todos table
     $keys = array_intersect(array_keys($post_obj), self::$whitelist);
     return join(', ', $keys);
   }
-  /**
-   * @todo htmlspecialchars() for each value
-   */
+
   private static function parse_values($post_obj) {
     $sanitized = [];
     $vals = array_values($post_obj);
@@ -68,11 +69,7 @@ class Todo {
   }
 
   public static function export_todos_to_csv($output, $query = null) {
-    if (!$query) {
-      $todos = self::get_all_todos();
-    } else {
-      $todos = self::search($query);
-    }
+    $todos = (!$query) ? self::get_all_todos() : self::search($query);
     // output the column headings
     fputcsv($output, array_keys($todos[0]));
     // loop over the rows, outputting them to csv file
