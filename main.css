@@ -75,12 +75,15 @@ textarea.form-control {
   font-size: 18px;
 }
 
-input[type="submit"] {
+input[type="submit"], .btn-primary {
   background: #ff8500;
   color: #191718;
-  font-size: 20px;
   text-transform: uppercase;
   transition: ease all .3s;
+}
+
+input[type="submit"] {
+  font-size: 20px;
 }
 
 input[type="submit"]:hover {

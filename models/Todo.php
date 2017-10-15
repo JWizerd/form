@@ -38,7 +38,7 @@ class Todo {
   public static function get_all_todos() {
     $db = new DB();
     $todos = [];
-    $todos_obj = $db->pdo->query('SELECT * FROM todos');
+    $todos_obj = $db->pdo->query('SELECT * FROM todos ORDER BY id ASC');
     foreach ($todos_obj as $field_name => $field) {
       array_push($todos, $field);
     }
@@ -57,7 +57,8 @@ class Todo {
                                         designer LIKE '%{$query}%' OR
                                         pmteam LIKE '%{$query}%' OR
                                         todo LIKE '%{$query}%' OR
-                                        description LIKE '%{$query}%'
+                                        description LIKE '%{$query}%
+                                        ORDER BY id ASC'
                                 ");
     foreach ($todos_obj as $field_name => $field) {
       array_push($todos, $field);
