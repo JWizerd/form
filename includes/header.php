@@ -1,4 +1,3 @@
-<?php require('./models/Todo.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,6 @@
 <body>
   <nav>
     <a href="./">Form</a>
-    <a href="./view-all-todos.php">View All Todos</a>
+    <a href="./view-all-todos.php">View All Submitted Todos</a>
     <a href="./export.php" class="pull-right">Export Data</a>
   </nav>
