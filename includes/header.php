@@ -10,5 +10,5 @@
   <nav>
     <a href="./">Form</a>
     <a href="./view-all-todos.php">View All Submitted Todos</a>
-    <a href="./export.php" class="pull-right">Export Data</a>
+    <a href="./export.php" class="pull-right">Export CSV</a>
   </nav>

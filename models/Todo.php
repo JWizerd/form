@@ -69,4 +69,16 @@ class Todo {
     $stmt = null;
   }
 
+  public static function export_todos_to_csv($output, $query = null) {
+    if (!$query) {
+      $todos = self::get_all_todos();
+    }
+    // output the column headings
+    fputcsv($output, array_keys($todos[0]));
+    // loop over the rows, outputting them to csv file
+    foreach ($todos as $todo => $fields) {
+      fputcsv($output, $fields);
+    }
+  }
+
 } /* todo class */
