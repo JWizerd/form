@@ -5,6 +5,7 @@
       <div class="col-md-6 col-md-offset-3 text-center">
         <p><a href="./"><img class="img-responsive" src="./madwire-logo.jpg" alt=""></a></p>
         <h1>Search Results for: <?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?></h1>
+        <p><a href="./export.php?q=<?= $_GET['q']; ?>">Export Search as CSV</a></p>
         <hr>
       </div>
       <div class="col-sm-12 text-center">

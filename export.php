@@ -11,4 +11,8 @@ header('Content-Disposition: attachment; filename=all-bad-todos.csv');
 
 $output = fopen('php://output', 'w');
 
-Todo::export_todos_to_csv($output);
+if (isset($_GET['q'])) {
+  Todo::export_todos_to_csv($output, htmlspecialchars($_GET['q']));
+} else {
+  Todo::export_todos_to_csv($output);
+}
