@@ -2,7 +2,7 @@
   class DB {
 
     protected $host    = 'localhost';
-    protected $db      = 'bad_todo_form';
+    protected $db      = 'bad_todos';
     protected $user    = 'root';
     protected $pass    = 'root';
     protected $charset = 'utf8';

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
         <p class="text-center"><a href="./"><img class="img-responsive" src="./madwire-logo.jpg" alt=""></a></p>
-        <h1>Bad ToDo Form</h1>
+        <h1>The Awesomizer</h1>
         <hr>
         <div class="summary">
           <p>This todo form is meant to improve the project manager to developer process by providing useful feedback for:</p>
